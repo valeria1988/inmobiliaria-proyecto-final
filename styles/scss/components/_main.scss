@@ -1,0 +1,27 @@
+@mixin tituloCentrado {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+    padding: 20px 40px;
+
+
+    h1 {
+        @include tituloCentrado;
+        padding-left: 20;
+    }
+
+    h2 {
+        @include tituloCentrado;
+        padding-inline-start: 20;
+    }
+
+    h3 {
+        @include tituloCentrado;
+        padding: 20;
+    }
+    
+}
