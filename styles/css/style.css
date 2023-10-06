@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  display: grid;
+  grid-template-areas: "header main aside" "header main aside" "header main aside" "footer footer footer";
+  grid-template-columns: 200px auto 250px;
+}
+
+@media (max-width: 991px) {
+  body {
+    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+    grid-template-columns: auto;
+  }
+}
+main {
+  grid-area: main;
+  width: 100%;
+  padding: 20px 40px;
+}
+main h1 {
+  text-align: center;
+  margin: 30px 20px;
+  padding-left: 20;
+}
+main h2 {
+  text-align: center;
+  margin: 30px 20px;
+  padding-inline-start: 20;
+}
+main h3 {
+  text-align: center;
+  margin: 30px 20px;
+  padding: 20;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+aside p {
+  margin: 20px;
+}
+aside .card, aside .card--green, aside .card--blue, aside .card--red {
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 20px;
+  box-shadow: 0px 10px 10px -6px #cfcdcd;
+  transition: transform 0.2s;
+}
+aside .card:hover, aside .card--green:hover, aside .card--blue:hover, aside .card--red:hover {
+  transform: scale(1.1);
+}
+aside .card--red {
+  border: 1px solid #f27979;
+}
+aside .card--blue {
+  border: 1px solid #8c94f9;
+}
+aside .card--green {
+  border: 1px solid #79f27f;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+footer .footer-info {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+header {
+  grid-area: header;
+}
+header nav {
+  text-decoration: none;
+  color: beige;
+  background-color: dimgrey;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  header nav {
+    flex-direction: row;
+  }
+}
+header a:hover {
+  background-color: darksalmon;
+}
+header img {
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  justify-content: left;
+}
+@media (max-width: 991px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+form {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+form input,
+form textarea {
+  outline: none;
+  border: 10px;
+}
+form .field {
+  border: solid 1px;
+  padding: 10px;
+  width: 280px;
+}
+form .center-content {
+  padding: 10px;
+}
+form .center-content:hover {
+  background-color: darksalmon;
+  border: solid 1px;
+}
+
+/*# sourceMappingURL=style.css.map */

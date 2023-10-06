@@ -1,0 +1,23 @@
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .footer-info {
+        width: 100%;
+    }
+    @media (max-width: 991px) {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+

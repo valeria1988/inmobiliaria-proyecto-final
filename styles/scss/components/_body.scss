@@ -1,0 +1,24 @@
+
+body {
+    font-family: 'Poppins', sans-serif ;
+    background-color: white;
+
+    display: grid;
+    grid-template-areas:
+        "header main aside"
+        "header main aside"
+        "header main aside"
+        "footer footer footer";
+    grid-template-columns: 200px auto 250px;
+}
+
+@media (max-width: 991px) {
+    body {
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "aside aside aside"
+        "footer footer footer";
+        grid-template-columns: auto;
+    }
+}

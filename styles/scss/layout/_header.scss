@@ -1,0 +1,40 @@
+header {
+    grid-area: header;
+
+    nav {
+        text-decoration: none;
+        color: beige;
+        background-color: dimgrey;
+        padding: 10px 20px;
+        margin: 20px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width: 991px) {
+            flex-direction: row;
+        }
+    }
+
+    a:hover {
+        background-color: darksalmon;
+    }
+
+
+    img {
+        padding: 10px;
+        margin: 20px;
+        text-align: center;
+        justify-content: left;
+    }
+
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
