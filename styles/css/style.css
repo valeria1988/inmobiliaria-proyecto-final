@@ -7,12 +7,15 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
-  background-image: url(/imagenes/Los-Angeles-CAportada.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-template-areas: "header main aside" "header main aside" "header main aside" "footer footer footer";
   grid-template-columns: 200px auto 250px;
+}
+
+.image-background {
+  background-image: url(../../../imagenes/Los-Angeles-CAportada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 991px) {
@@ -117,7 +120,7 @@ header {
 header nav {
   text-decoration: none;
   color: beige;
-  background-color: dimgrey;
+  background-color: #fcfcfc;
   padding: 10px 20px;
   margin: 20px;
   text-align: center;
@@ -134,7 +137,7 @@ header nav {
     width: 100%;
   }
 }
-header a:hover {
+header li > a:hover {
   background-color: darkseagreen;
 }
 header img {
