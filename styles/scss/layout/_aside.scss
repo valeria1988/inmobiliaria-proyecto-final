@@ -4,7 +4,7 @@ aside {
     flex-direction: column;
     gap: 25px;
     padding: 10px;
-    margin: 10px;
+    margin-right: 18px;
     border-radius: 10px;
     text-align: center;
 
@@ -27,19 +27,11 @@ aside {
             transform: scale(1.1);
         }
 
-        &--red {
-            @extend .card;
-            border: 1px solid #f27979;
-        }
 
-        &--blue {
-            @extend .card;
-            border: 1px solid #8c94f9;
-        }
 
         &--green {
             @extend .card;
-            border: 1px solid #79f27f;
+            border: 1px solid green;
         }
     }
 

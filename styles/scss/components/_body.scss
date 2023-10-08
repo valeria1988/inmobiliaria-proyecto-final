@@ -2,6 +2,9 @@
 body {
     font-family: 'Poppins', sans-serif ;
     background-color: white;
+    background-image: url(/imagenes/Los-Angeles-CAportada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     display: grid;
     grid-template-areas:
@@ -10,6 +13,7 @@ body {
         "header main aside"
         "footer footer footer";
     grid-template-columns: 200px auto 250px;
+
 }
 
 @media (max-width: 991px) {

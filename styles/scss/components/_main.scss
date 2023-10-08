@@ -1,3 +1,5 @@
+@import "../abstract/variables";
+
 @mixin tituloCentrado {
     text-align: center;
     margin: 30px 20px;
@@ -7,6 +9,11 @@ main {
     grid-area: main;
     width: 100%;
     padding: 20px 40px;
+    margin-top: 20px;
+
+
+
+
 
 
     h1 {
@@ -23,5 +30,23 @@ main {
         @include tituloCentrado;
         padding: 20;
     }
-    
+
+    .card {
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 10px 10px -6px #cfcdcd;
+
+        p {
+            margin-top: 23px;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+
+.blur {
+    backdrop-filter: $blur;
+    background-color: $blur-color;
+    border-radius: 10px;
 }

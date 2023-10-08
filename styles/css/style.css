@@ -7,6 +7,9 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
+  background-image: url(/imagenes/Los-Angeles-CAportada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-areas: "header main aside" "header main aside" "header main aside" "footer footer footer";
   grid-template-columns: 200px auto 250px;
@@ -22,6 +25,7 @@ main {
   grid-area: main;
   width: 100%;
   padding: 20px 40px;
+  margin-top: 20px;
 }
 main h1 {
   text-align: center;
@@ -38,6 +42,21 @@ main h3 {
   margin: 30px 20px;
   padding: 20;
 }
+main .card, main aside .card--green, aside main .card--green {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px -6px #cfcdcd;
+}
+main .card p, main aside .card--green p, aside main .card--green p {
+  margin-top: 23px;
+  margin-bottom: 0;
+}
+
+.blur {
+  backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0.53);
+  border-radius: 10px;
+}
 
 aside {
   grid-area: aside;
@@ -45,14 +64,14 @@ aside {
   flex-direction: column;
   gap: 25px;
   padding: 10px;
-  margin: 10px;
+  margin-right: 18px;
   border-radius: 10px;
   text-align: center;
 }
 aside p {
   margin: 20px;
 }
-aside .card, aside .card--green, aside .card--blue, aside .card--red {
+aside .card, aside .card--green {
   align-items: center;
   border-radius: 10px;
   width: 100%;
@@ -61,34 +80,34 @@ aside .card, aside .card--green, aside .card--blue, aside .card--red {
   box-shadow: 0px 10px 10px -6px #cfcdcd;
   transition: transform 0.2s;
 }
-aside .card:hover, aside .card--green:hover, aside .card--blue:hover, aside .card--red:hover {
+aside .card:hover, aside .card--green:hover {
   transform: scale(1.1);
 }
-aside .card--red {
-  border: 1px solid #f27979;
-}
-aside .card--blue {
-  border: 1px solid #8c94f9;
-}
 aside .card--green {
-  border: 1px solid #79f27f;
+  border: 1px solid green;
 }
 
 footer {
   grid-area: footer;
   text-align: center;
-  padding: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
+  background-color: rgba(143, 188, 143, 0.8588235294);
+  padding: 25px 25px 5px 25px;
+  margin-top: 25px;
 }
 footer .footer-info {
   width: 100%;
 }
+footer p {
+  margin-bottom: 0.4rem;
+}
 @media (max-width: 991px) {
   footer {
     flex-direction: column;
+    font-size: 12px;
   }
 }
 
@@ -106,15 +125,17 @@ header nav {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
 }
 @media (max-width: 991px) {
   header nav {
     flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
   }
 }
 header a:hover {
-  background-color: darksalmon;
+  background-color: darkseagreen;
 }
 header img {
   padding: 10px;
@@ -125,16 +146,22 @@ header img {
 @media (max-width: 991px) {
   header {
     display: flex;
-    justify-content: space-between;
   }
+}
+
+.barra {
+  margin-bottom: 5px;
 }
 
 form {
   width: 300px;
   padding: 10px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 5px;
+  background-color: darkseagreen;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 form input,
 form textarea {
@@ -142,16 +169,29 @@ form textarea {
   border: 10px;
 }
 form .field {
-  border: solid 1px;
   padding: 10px;
   width: 280px;
+  border-radius: 4px;
+  background-color: aliceblue;
 }
-form .center-content {
+form .button {
+  border-radius: 8px;
+  background: green;
+  color: white;
+  align-self: center;
   padding: 10px;
 }
-form .center-content:hover {
-  background-color: darksalmon;
+form .button:hover {
+  background-color: #cdd500;
   border: solid 1px;
+}
+
+.color-img {
+  filter: hue-rotate(100deg);
+}
+
+.center {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

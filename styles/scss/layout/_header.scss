@@ -12,15 +12,17 @@ header {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: auto;
 
         @media (max-width: 991px) {
             flex-direction: row;
+            justify-content: space-around !important;
+            width: 100%;
         }
     }
 
     a:hover {
-        background-color: darksalmon;
+        background-color: darkseagreen;
     }
 
 
@@ -33,7 +35,7 @@ header {
 
     @media (max-width: 991px) {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
 
