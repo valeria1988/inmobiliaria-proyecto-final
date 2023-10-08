@@ -4,7 +4,7 @@ header {
     nav {
         text-decoration: none;
         color: beige;
-        background-color: dimgrey;
+        background-color: #fcfcfc;
         padding: 10px 20px;
         margin: 20px;
         text-align: center;
@@ -21,7 +21,9 @@ header {
         }
     }
 
-    a:hover {
+   
+
+    li > a:hover {
         background-color: darkseagreen;
     }
 
