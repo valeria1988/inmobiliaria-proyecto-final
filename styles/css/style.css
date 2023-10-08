@@ -13,7 +13,7 @@ body {
 }
 
 .image-background {
-  background-image: url(../../../imagenes/Los-Angeles-CAportada.jpg);
+  background-image: url(../../imagenes/Los-Angeles-CAportada.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
