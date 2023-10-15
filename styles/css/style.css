@@ -1,18 +1,202 @@
-/* Error: expected "}".
- *    ,
- * 37 | }
- *    |  ^
- *    '
- *   styles\scss\pages\_contacto.scss 37:2  @import
- *   styles\scss\style.scss 13:9            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a    \2577 \a 37 \2502  }\a    \2502   ^\a    \2575 \a   styles\\scss\\pages\\_contacto.scss 37:2  @import\a   styles\\scss\\style.scss 13:9            root stylesheet';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header main aside" "header main aside" "header main aside" "footer footer footer";
+  grid-template-columns: 200px auto 250px;
+}
+
+.image-background {
+  background-image: url(../../imagenes/portada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  body {
+    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+    grid-template-columns: auto;
+  }
+}
+main {
+  grid-area: main;
+  width: 100%;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+main h1 {
+  text-align: center;
+  margin: 30px 20px;
+  padding-left: 20;
+}
+main h2 {
+  text-align: center;
+  margin: 30px 20px;
+  padding-inline-start: 20;
+}
+main h3 {
+  text-align: center;
+  margin: 30px 20px;
+  padding: 20;
+}
+main .card, main aside .card--green, aside main .card--green {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px -6px #cfcdcd;
+}
+main .card p, main aside .card--green p, aside main .card--green p {
+  margin-top: 23px;
+  margin-bottom: 0;
+}
+
+.blur {
+  backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0.53);
+  border-radius: 10px;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+  margin-right: 18px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-x: hidden;
+}
+aside p {
+  margin: 20px;
+}
+aside .card, aside .card--green {
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 20px;
+  box-shadow: 0px 10px 10px -6px #cfcdcd;
+  transition: transform 0.2s;
+}
+aside .card:hover, aside .card--green:hover {
+  transform: scale(1.1);
+}
+aside .card--green {
+  border: 1px solid green;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(143, 188, 143, 0.8588235294);
+  padding: 25px 25px 5px 25px;
+  margin-top: 25px;
+}
+footer .footer-info {
+  width: 100%;
+}
+footer p {
+  margin-bottom: 0.4rem;
+}
+@media (max-width: 991px) {
+  footer {
+    flex-direction: column;
+    font-size: 12px;
+  }
+}
+
+header {
+  grid-area: header;
+}
+header nav {
+  text-decoration: none;
+  color: beige;
+  background-color: #fcfcfc;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+@media (max-width: 991px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
+  }
+}
+header li > a:hover {
+  background-color: darkseagreen;
+}
+header img {
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  justify-content: left;
+}
+@media (max-width: 991px) {
+  header {
+    display: flex;
+  }
+}
+
+.barra {
+  margin-bottom: 5px;
+}
+
+form {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: darkseagreen;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input,
+form textarea {
+  outline: none;
+  border: 10px;
+}
+form .field {
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: aliceblue;
+}
+form .button {
+  border-radius: 8px;
+  background: green;
+  color: white;
+  align-self: center;
+  padding: 10px;
+}
+form .button:hover {
+  background-color: #cdd500;
+  border: solid 1px;
+}
+
+.color-img {
+  filter: hue-rotate(100deg);
+}
+
+.center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
