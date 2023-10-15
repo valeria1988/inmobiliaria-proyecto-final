@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
+  min-height: 100vh;
   display: grid;
   grid-template-areas: "header main aside" "header main aside" "header main aside" "footer footer footer";
   grid-template-columns: 200px auto 250px;
@@ -70,6 +71,7 @@ aside {
   margin-right: 18px;
   border-radius: 10px;
   text-align: center;
+  overflow-x: hidden;
 }
 aside p {
   margin: 20px;
