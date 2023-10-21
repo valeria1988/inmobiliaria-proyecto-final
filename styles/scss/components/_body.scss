@@ -21,13 +21,4 @@ body {
     background-size: cover;
 }
 
-@media (max-width: 991px) {
-    body {
-        grid-template-areas:
-        "header header header"
-        "main main main"
-        "aside aside aside"
-        "footer footer footer";
-        grid-template-columns: auto;
-    }
-}
+
