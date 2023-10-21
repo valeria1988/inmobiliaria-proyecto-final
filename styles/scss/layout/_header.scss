@@ -14,11 +14,7 @@ header {
         flex-direction: column;
         width: auto;
 
-        @media (max-width: 991px) {
-            flex-direction: row;
-            justify-content: space-around !important;
-            width: 100%;
-        }
+       
     }
 
    
@@ -35,10 +31,7 @@ header {
         justify-content: left;
     }
 
-    @media (max-width: 991px) {
-        display: flex;
-        // justify-content: space-between;
-    }
+    
 
 
 }

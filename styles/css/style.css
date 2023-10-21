@@ -19,12 +19,6 @@ body {
   background-size: cover;
 }
 
-@media (max-width: 991px) {
-  body {
-    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
-    grid-template-columns: auto;
-  }
-}
 main {
   grid-area: main;
   width: 100%;
@@ -60,6 +54,51 @@ main .card p, main aside .card--green p, aside main .card--green p {
   backdrop-filter: blur(7px);
   background-color: rgba(255, 255, 255, 0.53);
   border-radius: 10px;
+}
+
+.barra {
+  margin-bottom: 5px;
+}
+
+form {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: darkseagreen;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input,
+form textarea {
+  outline: none;
+  border: 10px;
+}
+form .field {
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: aliceblue;
+}
+form .button {
+  border-radius: 8px;
+  background: green;
+  color: white;
+  align-self: center;
+  padding: 10px;
+}
+form .button:hover {
+  background-color: #cdd500;
+  border: solid 1px;
+}
+
+.color-img {
+  filter: hue-rotate(100deg);
+}
+
+.center {
+  text-align: center;
 }
 
 aside {
@@ -109,12 +148,6 @@ footer .footer-info {
 footer p {
   margin-bottom: 0.4rem;
 }
-@media (max-width: 991px) {
-  footer {
-    flex-direction: column;
-    font-size: 12px;
-  }
-}
 
 header {
   grid-area: header;
@@ -132,13 +165,6 @@ header nav {
   flex-direction: column;
   width: auto;
 }
-@media (max-width: 991px) {
-  header nav {
-    flex-direction: row;
-    justify-content: space-around !important;
-    width: 100%;
-  }
-}
 header li > a:hover {
   background-color: darkseagreen;
 }
@@ -148,55 +174,24 @@ header img {
   text-align: center;
   justify-content: left;
 }
+
 @media (max-width: 991px) {
+  body {
+    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+    grid-template-columns: auto;
+  }
+  footer {
+    flex-direction: column;
+    font-size: 12px;
+  }
   header {
     display: flex;
   }
-}
-
-.barra {
-  margin-bottom: 5px;
-}
-
-form {
-  width: 100%;
-  padding: 10px;
-  margin: 0 auto;
-  background-color: darkseagreen;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-form input,
-form textarea {
-  outline: none;
-  border: 10px;
-}
-form .field {
-  padding: 10px;
-  width: 100%;
-  border-radius: 4px;
-  background-color: aliceblue;
-}
-form .button {
-  border-radius: 8px;
-  background: green;
-  color: white;
-  align-self: center;
-  padding: 10px;
-}
-form .button:hover {
-  background-color: #cdd500;
-  border: solid 1px;
-}
-
-.color-img {
-  filter: hue-rotate(100deg);
-}
-
-.center {
-  text-align: center;
+  header nav {
+    flex-direction: row;
+    justify-content: space-around !important;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
